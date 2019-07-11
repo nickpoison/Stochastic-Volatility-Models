@@ -1,12 +1,12 @@
 # Stochastic-Volatility-Models
-R Code to accompany "An Approach to Efficient Fitting of Univariate and Multivariate Stochastic Volatility Models"
 
+##### R Code to accompany 
 
-In progress ... will put R code for paper here.
+####  _An Approach to Efficient Fitting of Univariate and Multivariate Stochastic Volatility Models_
 
+#### The paper is available here: https://www.stat.pitt.edu/stoffer/xxx.pdf
 
-
-For the bibTeX item for this site I used the following:
+For the bibTeX item for this site, I used the following:
 <pre>
 @misc{GongStoffer2019,
   author = {Gong, Chen and Stoffer, David S.},
@@ -15,4 +15,19 @@ For the bibTeX item for this site I used the following:
   year = {2019}, 
   note = "[GitHub Repository]"
 }  
-<pre>
+</pre>
+
+
+
+* The data are in the folder *data* and are compressed R data files.
+* The various PGAS files are in the folder *R* ... these are sourced in the files used to run the examples.
+* Each example is identified by starting with `run_` and then a self describing title.  You just run the code, it will call the data file and PGAS procedure as needed.
+
+-------------------
+
+ You'll need the following R packages to run all the code:
+
+* astsa
+* plyr
+* MASS 
+* mcmc   
