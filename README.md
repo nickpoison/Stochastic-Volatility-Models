@@ -8,7 +8,7 @@
 
 For the bibTeX item for this site, I used the following:
 <pre>
-@misc{GongStoffer2019,
+@misc{GitGongStoffer2019,
   author = {Gong, Chen and Stoffer, David S.},
   title = {{Stochastic Volatility Models}},
   howpublished = "\url{https://github.com/nickpoison/Stochastic-Volatility-Models/}",
