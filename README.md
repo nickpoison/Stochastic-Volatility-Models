@@ -1,10 +1,14 @@
 # Stochastic-Volatility-Models
 
+```diff
+- coming soon to an internet near you
+```
+
 ##### R Code to accompany 
 
 ####  _An Approach to Efficient Fitting of Univariate and Multivariate Stochastic Volatility Models_
 
-#### The paper is available here: https://www.stat.pitt.edu/stoffer/xxx.pdf
+#### The paper is available here: [coming soon] 
 
 For the bibTeX item for this site, I used the following:
 <pre>
