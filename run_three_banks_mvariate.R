@@ -1,7 +1,8 @@
 ##########################################################################
-##            MSV Model using PGAS for BOA, Citi and JPM data           ##
-##                    2-parameter model                                 ##
+##            MSV Model using PGAS joint modeling not adaptive          ##
+##               for banks BOA, Citi and JPM                            ##
 ##                                                                      ##
+##            we pay our debts on time ... sometimes                    ##
 ##########################################################################
 
 
