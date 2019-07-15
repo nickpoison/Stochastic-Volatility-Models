@@ -32,12 +32,11 @@ The bibTeX item for the paper can be
 author =  {Gong, Chen and Stoffer, David S.},
 year = {2019},
 month = {07},
-pages = {21},
 title = {An Approach to Efficient Fitting of Univariate and Multivariate Stochastic Volatility Models},
 doi = {10.13140/RG.2.2.29926.37440}
 howpublished = "\url{https://www.researchgate.net/publication/334457681_An_Approach_to_Efficient_Fitting_of_Univariate_and_Multivariate_Stochastic_Volatility_Models}",
 }
-<pre>
+</pre>
 
 
 For the bibTeX item for this site, I used the following:
