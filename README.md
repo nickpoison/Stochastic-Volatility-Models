@@ -6,7 +6,8 @@
 
 ####  _An Approach to Efficient Fitting of Univariate and Multivariate Stochastic Volatility Models_
 
-**The paper is available here:**  https://www.researchgate.net/publication/334457681_An_Approach_to_Efficient_Fitting_of_Univariate_and_Multivariate_Stochastic_Volatility_Models)
+**The paper is available here:** <br/> 
+https://www.researchgate.net/publication/334457681_An_Approach_to_Efficient_Fitting_of_Univariate_and_Multivariate_Stochastic_Volatility_Models
 
 
 * The data are in the folder *data* and are compressed R data files.
@@ -25,6 +26,20 @@
 <br/> 
 
 -------------
+The bibTeX item for the paper can be
+<pre>
+@online{GongStoffer2019,
+author =  {Gong, Chen and Stoffer, David S.},
+year = {2019},
+month = {07},
+pages = {21},
+title = {An Approach to Efficient Fitting of Univariate and Multivariate Stochastic Volatility Models},
+doi = {10.13140/RG.2.2.29926.37440}
+howpublished = "\url{https://www.researchgate.net/publication/334457681_An_Approach_to_Efficient_Fitting_of_Univariate_and_Multivariate_Stochastic_Volatility_Models}",
+}
+<pre>
+
+
 For the bibTeX item for this site, I used the following:
 <pre>
 @misc{GitGongStoffer2019,
