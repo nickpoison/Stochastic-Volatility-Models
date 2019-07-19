@@ -7,7 +7,7 @@
 ####  _An Approach to Efficient Fitting of Univariate and Multivariate Stochastic Volatility Models_
 
 **The paper is available here:** <br/> 
-https://www.researchgate.net/publication/334457681_An_Approach_to_Efficient_Fitting_of_Univariate_and_Multivariate_Stochastic_Volatility_Models
+[the paper](https://www.researchgate.net/publication/334457681_An_Approach_to_Efficient_Fitting_of_Univariate_and_Multivariate_Stochastic_Volatility_Models)
 
 
 * The data are in the folder *data* and are compressed R data files.
