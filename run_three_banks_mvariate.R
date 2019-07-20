@@ -23,7 +23,7 @@ nmcmc   = 2000     # Number of iterations in the mcmc sampler after burnin
 burnin  = 500      # Number of iterations to burn                               
 mcmseed = 90210
 
-#  Initial values of phi, q, mu 
+#  Initial values of phi, q, betas
 init      = c(0.9, 0.25)
 beta_init = c(1.5, 1.5, 1.5)
 hyper     = c(0.9, 0.25, 0.075, 0.1, -0.25)
@@ -89,7 +89,7 @@ mX = ts(apply(u_nd$X, 2, mean), start=tspar[1], frequency=tspar[3])
 lX = ts(apply(u_nd$X, 2, quantile, 0.005), start=tspar[1], frequency=tspar[3])
 uX = ts(apply(u_nd$X, 2, quantile, 0.995), start=tspar[1], frequency=tspar[3])
 
-#X = window(X, start=2005.008) 
+
 dev.new(width=10, height=8) 
 par(mfrow=c(4,1), cex.lab=1.25)
 tsplot(y[,1], ylab='BOA', col=culer[1], lwd=2)
