@@ -16,8 +16,8 @@ y2  = as.vector(y2)
 L   =  min(y1,y2)  
 U   =  max(y1,y2)
 
-numer = function(sig,phi,h) exp(sig*phi^h)-1
-denom = function(sig) 3*exp(sig)-1
+numer = function(sig,phi,h) { exp(sig*phi^h)-1 }
+denom = function(sig) { 3*exp(sig)-1 }
 
 # ACFs
 phi =.97
@@ -31,14 +31,14 @@ culer  = c(rgb(.85,.30,.12), rgb(.12,.65,.85))
  
 layout(matrix(c(1,2, 1,3), 2), heights=c(1,.75))
 tsplot(y1, col=culera[1], lwd=2, ylim=c(L,U), ylab='%')
-lines(y2, col=culera[2], lwd=2)
-legend('bottomleft', col=culer, lwd=c(2,2), legend=c('Series A', 'Series B'), cex=1.1, bg='white')
+ lines(y2, col=culera[2], lwd=2)
+ legend('bottomleft', col=culer, lwd=c(2,2), legend=c('Series A', 'Series B'), cex=1.1, bg='white')
 acf1(y1^2, 30, main='', ylim=c(0,.6), col=culer[1], lwd=4)
-title('Squared Series A', col.main=culer[1])
-lines(u1, lwd=2)
-lines(u2, lwd=2)
+ title('Squared Series A', col.main=culer[1])
+ lines(u1, lwd=2)
+ lines(u2, lwd=2)
 acf1(y2^2, 30, main='', ylim=c(0,.6), col=culer[2], lwd=4)
-title('Squared Series B', col.main=culer[2])
-lines(u1, lwd=2)
-lines(u2, lwd=2)
+ title('Squared Series B', col.main=culer[2])
+ lines(u1, lwd=2)
+ lines(u2, lwd=2)
 

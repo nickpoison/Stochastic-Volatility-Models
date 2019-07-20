@@ -2,6 +2,7 @@
 ##                                      ##
 ##    2 parameter model                 ##
 ##  sample parameters one at a time     ##
+##                                      ##
 ##########################################
 
 library(astsa)
@@ -48,19 +49,18 @@ layout(matrix(c(1,3, 2,4), 2), heights=c(1,1))
 for (i in 1:2){
  tsplot(parms[,i], ylab='trace', xlab='index', ,main='', col=culera[i])
  lines(lowess(parms[,i], f=.05), lwd=2, col=culera[i%%2+1])
- # abline(h=mean(parms[,i]), col=culera[i%%2+1], lwd=2)
  mtext(names[i], 3, line=.25, cex=1)
 }
 u1 = acf1(parms[,1], 300, plot=FALSE)
 u2 = acf1(parms[,2], 300, plot=FALSE)
 tsplot(u1, col=culera[1], lwd=2, ylab='ACF', xlab='LAG', ylim=c(-.1,.8))
-lines(u2,  col=culera[2], lwd=2)
-abline(h=c(0,-sqrt(2/1000),sqrt(2/1000)), col=gray(.5), lty=c(1,2,2))
+ lines(u2,  col=culera[2], lwd=2)
+ abline(h=c(0,-sqrt(2/1000),sqrt(2/1000)), col=gray(.5), lty=c(1,2,2))
 z  = kde2d(parms[,1], parms[,2], h=c(.01,.15))
 plot(parms[,1], parms[,2], pch=20, col=rgb(24,116,205,max=255,alpha=150), 
      xlab=expression(phi), ylab=expression(sigma), cex=1.25, cex.lab=1.25, panel.first=Grid())
-contour(z, drawlabels=FALSE, nlevels=15,  add=TRUE, col=gray(.5))
-abline(h=mean(parms[,2]), col=gray(.5))
-abline(v=mean(parms[,1]), col=gray(.5))
+ contour(z, drawlabels=FALSE, nlevels=15,  add=TRUE, col=gray(.5))
+ abline(h=mean(parms[,2]), col=gray(.5))
+ abline(v=mean(parms[,1]), col=gray(.5))
 
  

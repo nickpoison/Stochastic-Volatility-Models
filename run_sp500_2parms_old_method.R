@@ -1,7 +1,7 @@
 #########################################################################
 ##              Application on S&P500 using 2-parm SV Model            ##
 ##                  2 parameter model (set mu=0)                       ##
-##                  this is old prior method                           ##
+##             this is the individual sampling (old) method            ##
 #########################################################################
 
 
@@ -61,8 +61,10 @@ polygon(xx, yy, border=NA, col=culerb[1])
 
 # parameters
 dev.new(width=9, height=6)  
-IF = sprintf("%.2f", round(cbind(initseq(parms[,1])$var.pos/initseq(parms[,1])$gamma0, initseq(parms[,2])$var.pos/initseq(parms[,2])$gamma0),2))
-layout(matrix(c(1,3, 2,4), 2), heights=c(1,1))
+IF = sprintf("%.2f", 
+       round(cbind(initseq(parms[,1])$var.pos/initseq(parms[,1])$gamma0, 
+			       initseq(parms[,2])$var.pos/initseq(parms[,2])$gamma0), 2))
+layout(matrix(c(1,3, 2,4), 2), heights=c(1,1))  
 for (i in 1:2){
 tsplot(parms[,i], ylab='trace', xlab='index', ,main='', col=culer[i])
  abline(h=mean(parms[,i]), col=culera[i%%2+1], lwd=2)
@@ -72,12 +74,14 @@ tsplot(parms[,i], ylab='trace', xlab='index', ,main='', col=culer[i])
   u2 = acf1(parms[,2], 100, plot=FALSE)
   L  = min(u1,u2)
   U  = max(c(u1,u2,1))
- tsplot(u2, col=culera[2], lwd=2, ylab='ACF', xlab='LAG', ylim=c(L,U))
+tsplot(u2, col=culera[2], lwd=2, ylab='ACF', xlab='LAG', ylim=c(L,U))
  lines(u1, col=culera[1], lwd=2)
  abline(h=0)
- legend('topright', legend=c(IF[1], IF[2]), lwd=2, col=culer, title.col=1, text.col=culer, title="Inefficiency", bg='white', text.font=2)
-plot(parms[,1], parms[,2], pch=20, col=rgb(24,116,205,max=255,alpha=150), xlab=expression(phi), ylab=expression(sigma), cex=1.25, cex.lab=1.25, panel.first=Grid() )
-abline(h=mean(parms[,2]), col=gray(.5))
-abline(v=mean(parms[,1]), col=gray(.5))
+ legend('topright', legend=c(IF[1], IF[2]), lwd=2, col=culer, title.col=1, 
+        text.col=culer, title="Inefficiency", bg='white', text.font=2)
+plot(parms[,1], parms[,2], pch=20, col=rgb(24,116,205,max=255,alpha=150), 
+     xlab=expression(phi), ylab=expression(sigma), cex=1.25, cex.lab=1.25, panel.first=Grid() )
+ abline(h=mean(parms[,2]), col=gray(.5))
+ abline(v=mean(parms[,1]), col=gray(.5))
 
 

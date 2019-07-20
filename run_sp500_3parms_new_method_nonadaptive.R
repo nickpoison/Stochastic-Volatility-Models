@@ -40,34 +40,37 @@ cat("The acceptance rate is", u3na$acp, "%.")
 ### Pretty pictures
 parms = cbind(u3na$phi, sqrt(u3na$q), u3na$mu)
 names = c(expression(phi), expression(sigma), expression(mu))
-culer = c(rgb(.66,.12,.85), rgb(.12,.66,.85), rgb(.8*.52,.8*.87,.8*.08) )
+culer = c(rgb(.66,.12,.85),      rgb(.12,.66,.85),    rgb(.8*.52,.8*.87,.8*.08) )
 culerb = c(rgb(.66,.12,.85, .4), rgb(.12,.66,.85,.4), rgb(.8*.52,.8*.87,.8*.08,.4) )
 
 # parameters
 dev.new(width=9, height=6)  
-IF = sprintf("%.2f", round(cbind(initseq(parms[,1])$var.pos/initseq(parms[,1])$gamma0, initseq(parms[,2])$var.pos/initseq(parms[,2])$gamma0, initseq(parms[,3])$var.pos/initseq(parms[,3])$gamma0), 3 ))
+IF = sprintf("%.2f", 
+       round(cbind(initseq(parms[,1])$var.pos/initseq(parms[,1])$gamma0, 
+	      initseq(parms[,2])$var.pos/initseq(parms[,2])$gamma0, 
+	      initseq(parms[,3])$var.pos/initseq(parms[,3])$gamma0), 3 ))
 par(mfrow=c(3,3))
 for (i in 1:3){
 tsplot(parms[,i], ylab='trace', xlab='index', ,main='', col=culer[i])
  abline(h=mean(parms[,i]), col=rgb(0,0,0,.5), lwd=1)
  mtext(names[i], 3, line=.25, cex=1)
  }
-  L=-.1; U=1
-  acf1(parms[,1], 100, ylim=c(L,U), main='', col=culer[1])
-    legend('topright', legend=paste('IF =', IF[1]),  bty='n', cex=1.25)
-  acf1(parms[,2], 100, ylim=c(L,U), main='', col=culer[2])
-    legend('topright', legend=paste('IF =', IF[2]),  bty='n', cex=1.25)
-  acf1(parms[,3], 100, ylim=c(L,U), main='', col=culer[3])
-    legend('topright', legend=paste('IF =', IF[3]),  bty='n', cex=1.25)
- for (i in 1:2){
-   hist(parms[,i], prob=TRUE, breaks=20, main='', xlab='')
-   Grid(nx=0, ny=NULL)
-   hist(parms[,i], breaks=20, col=culerb[i], border=culerb[i], prob=TRUE, add=TRUE)
+L=-.1; U=1
+acf1(parms[,1], 100, ylim=c(L,U), main='', col=culer[1])
+  legend('topright', legend=paste('IF =', IF[1]),  bty='n', cex=1.25)
+acf1(parms[,2], 100, ylim=c(L,U), main='', col=culer[2])
+  legend('topright', legend=paste('IF =', IF[2]),  bty='n', cex=1.25)
+acf1(parms[,3], 100, ylim=c(L,U), main='', col=culer[3])
+  legend('topright', legend=paste('IF =', IF[3]),  bty='n', cex=1.25)
+for (i in 1:2){
+  hist(parms[,i], prob=TRUE, breaks=20, main='', xlab='')
+  Grid(nx=0, ny=NULL)
+  hist(parms[,i], breaks=20, col=culerb[i], border=culerb[i], prob=TRUE, add=TRUE)
   lines(density(parms[,i], adjust=3))
   abline(v=mean(parms[,i]), col=rgb(0,0,0,.8), lwd=2, lty=1)
 } 
-  hist(parms[,3], prob=TRUE, breaks=20, main='', xlab='', ylim=c(0,3.6), xlim=c(-1.5,1.5))
-   Grid(nx=0, ny=NULL)
+hist(parms[,3], prob=TRUE, breaks=20, main='', xlab='', ylim=c(0,3.6), xlim=c(-1.5,1.5))
+  Grid(nx=0, ny=NULL)
   hist(parms[,3], breaks=20, col=culerb[3], border=culerb[3], prob=TRUE, add=TRUE)
   lines(density(parms[,3], adjust=4))
   abline(v=mean(parms[,3]), col=rgb(0,0,0,.8), lwd=2, lty=1)
