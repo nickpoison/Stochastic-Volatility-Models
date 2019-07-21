@@ -4,11 +4,8 @@
 #    2 parameters: X(t)=phi X(t-1) + W(t) ~ iid N(0,q) ;  Y(t)=exp{X(t)/2)}V(t) ~ iid N(0,1)     #
 ##################################################################################################
 #                                                                                                #
-#  Matlab code was provided by Fredrik Lindsten https://liu.se/en/employee/freli29               #
-#   This is the R version of that code ... and consequently the other versions                   #
-#    of the code for the paper are based on this code. It's not a sin to use T as                #
-#     a variable in Matlab, but it is in R.  Unfortunately, that sin (as they usually            #
-#      are) was paid forward. See you in R hell.                                                 #
+#   Matlab code was provided by Fredrik Lindsten https://liu.se/en/employee/freli29              #
+#   This is the R version of that code                                                           #
 #                                                                                                #
 ##################################################################################################
 
