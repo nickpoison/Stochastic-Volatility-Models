@@ -1,7 +1,8 @@
 ##########################################
 ##                                      ##
-##    2 parameter model                 ##
-##  sample parameters one at a time     ##
+##        2 parameter model             ##
+##    the old crappy method that        ##  
+##  samples parameters one at a time    ##
 ##                                      ##
 ##########################################
 

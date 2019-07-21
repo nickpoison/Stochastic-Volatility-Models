@@ -7,14 +7,14 @@ beta = .1
 Vsd  =  1
 sig1 =  1
 sig2 = 1.5
-x1 =  arima.sim(list(order=c(1,0,0), ar=.97), sd=sig1, n=num) + lev   
-y1  = beta*exp(x1/2)*rnorm(num,0,Vsd)  
-x2  =  arima.sim(list(order=c(1,0,0), ar=.92), sd=sig2, n=num) + lev   
-y2  = beta*exp(x2/2)*rnorm(num,0,Vsd) 
-y1  = as.vector(y1)  
-y2  = as.vector(y2)
-L   =  min(y1,y2)  
-U   =  max(y1,y2)
+x1   =  arima.sim(list(order=c(1,0,0), ar=.97), sd=sig1, n=num) + lev   
+y1   =  beta*exp(x1/2)*rnorm(num,0,Vsd)  
+x2   =  arima.sim(list(order=c(1,0,0), ar=.92), sd=sig2, n=num) + lev   
+y2   =  beta*exp(x2/2)*rnorm(num,0,Vsd) 
+y1   =  as.vector(y1)  
+y2   =  as.vector(y2)
+L    =  min(y1,y2)  
+U    =  max(y1,y2)
 
 numer = function(sig,phi,h) { exp(sig*phi^h)-1 }
 denom = function(sig) { 3*exp(sig)-1 }

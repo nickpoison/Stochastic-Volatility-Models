@@ -30,9 +30,9 @@ hyper     = c(0.9, 0.25, 0.075, 0.1, -0.25)
 sigma_MH  = .03 * matrix(c(1,-.25,-.25,1),nrow=2,ncol=2)
 
 # Run it 
-ptm <- proc.time()
+ ptm <- proc.time()
 u_nd = pgasMSV_binorm(nmcmc, burnin, y, init, beta_init, hyper, sigma_MH, npart, mcmseed)
-(time2run = proc.time() - ptm)
+ (time2run = proc.time() - ptm)
 
 # Acceptance Rate
 cat("The acceptance rate is", u_nd$acp, "%.")
@@ -45,7 +45,7 @@ parms = cbind(u_nd$phi, sqrt(u_nd$q), u_nd$beta[,1], u_nd$beta[,2], u_nd$beta[,3
 names = c(expression(phi), expression(sigma), expression(beta[1]), expression(beta[2]), expression(beta[3]))
 
 
-culer = c(rgb(.66,.12,.85), rgb(.12,.66,.85), rgb(.8*.52,.8*.87,.8*.08), rgb(.83,.31,.10), rgb(.63,.11, 0.40))
+culer = c(rgb(.66,.12,.85),      rgb(.12,.66,.85),    rgb(.8*.52,.8*.87,.8*.08),    rgb(.83,.31,.10),    rgb(.63,.11, 0.40))
 culerb = c(rgb(.66,.12,.85, .4), rgb(.12,.66,.85,.4), rgb(.8*.52,.8*.87,.8*.08,.4), rgb(.83,.31,.10,.4), rgb(.63,.11, 0.40,.4) )
 
 ###### parameters ##########
@@ -92,9 +92,9 @@ uX = ts(apply(u_nd$X, 2, quantile, 0.995), start=tspar[1], frequency=tspar[3])
 
 dev.new(width=10, height=8) 
 par(mfrow=c(4,1), cex.lab=1.25)
-tsplot(y[,1], ylab='BOA', col=culer[1], lwd=2)
+tsplot(y[,1], ylab='BOA',  col=culer[1], lwd=2)
 tsplot(y[,2], ylab='Citi', col=culer[2], lwd=2)
-tsplot(y[,3], ylab='JPM', col=culer[3], lwd=2)
+tsplot(y[,3], ylab='JPM',  col=culer[3], lwd=2)
 tsplot(mX, col=culer[4], ylim=c(-6,6), lwd=1, ylab='Log Volatiltiy (%)')
   xx=c(time(mX), rev(time(mX)))
   yy=c(lX, rev(uX))

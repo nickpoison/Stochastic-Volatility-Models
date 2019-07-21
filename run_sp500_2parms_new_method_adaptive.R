@@ -22,17 +22,17 @@ burnin  = 100      # Number of iterations to burn
 mcmseed = 90210 
 
 #  Bi-normal prior and initial values
-init = c(.95, 0.25, 0) 
-hyper = c(0.9, 0.25, 0.25, 0.25, -0.25)
-sigma_MH = .1*matrix(c(1,0.25,0.25,1),nrow=2,ncol=2)
-lambda_init = 2
-alpha.tar = 0.28
+init        =  c(.95, 0.25, 0) 
+hyper       =  c(0.9, 0.25, 0.25, 0.25, -0.25)
+sigma_MH    =  .1*matrix(c(1,0.25,0.25,1),nrow=2,ncol=2)
+lambda_init =  2
+alpha.tar   =  0.28
 
 
 # Run it
-ptm <- proc.time()
+ ptm <- proc.time()
 uu = pgasSV_binorm_ada(nmcmc, burnin, y, init, hyper, sigma_MH, npart, lambda_init, alpha.tar, parms_2 = T, mcmseed)
-(time2run10 = proc.time() - ptm)
+ (time2run = proc.time() - ptm)
 
 # Acceptance Rate
 cat("The acceptance rate is", uu$acp, "%.")
@@ -42,7 +42,7 @@ cat("The acceptance rate is", uu$acp, "%.")
 ############### Results  ########################
 culerb = c(rgb(.85,.30,.12,.3), rgb(.12,.65,.85,.3))
 culera = c(rgb(.85,.30,.12,.6), rgb(.12,.65,.85,.7))
-culer  = c(rgb(.85,.30,.12), rgb(.12,.65,.85))
+culer  = c(rgb(.85,.30,.12),    rgb(.12,.65,.85))
 
 ### Pretty pictures
 parms = cbind(uu$phi, sqrt(uu$q))
@@ -66,7 +66,9 @@ polygon(xx, yy, border=NA, col=culerb[2])
 
 # parameters
 dev.new(width=9, height=6)  
-IF = sprintf("%.2f", round(cbind(initseq(parms[,1])$var.pos/initseq(parms[,1])$gamma0, initseq(parms[,2])$var.pos/initseq(parms[,2])$gamma0),2))
+IF = sprintf("%.2f", 
+     round(cbind(initseq(parms[,1])$var.pos/initseq(parms[,1])$gamma0, 
+	             initseq(parms[,2])$var.pos/initseq(parms[,2])$gamma0), 2))
 layout(matrix(c(1,3, 2,4), 2), heights=c(1,1))
 for (i in 1:2){
 tsplot(parms[,i], ylab='trace', xlab='index', ,main='', col=culer[i])
@@ -80,8 +82,10 @@ tsplot(parms[,i], ylab='trace', xlab='index', ,main='', col=culer[i])
  tsplot(u2, col=culera[2], lwd=2, ylab='ACF', xlab='LAG', ylim=c(L,U))
  lines(u1, col=culera[1], lwd=2)
  abline(h=0)
- legend('topright', legend=c(IF[1], IF[2]), lwd=2, col=culer, title.col=1, text.col=culer, title="Inefficiency", bg='white', text.font=2)
-plot(parms[,1], parms[,2], pch=20, col=rgb(24,116,205,max=255,alpha=150), xlab=expression(phi), ylab=expression(sigma), cex=1.25, cex.lab=1.25, panel.first=Grid() )
+ legend('topright', legend=c(IF[1], IF[2]), lwd=2, col=culer, title.col=1, text.col=culer, 
+         title="Inefficiency", bg='white', text.font=2)
+plot(parms[,1], parms[,2], pch=20, col=rgb(24,116,205,max=255,alpha=150), xlab=expression(phi), 
+      ylab=expression(sigma), cex=1.25, cex.lab=1.25, panel.first=Grid() )
 abline(h=mean(parms[,2]), col=gray(.5))
 abline(v=mean(parms[,1]), col=gray(.5))
 

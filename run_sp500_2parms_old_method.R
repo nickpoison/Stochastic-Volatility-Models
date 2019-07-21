@@ -1,7 +1,7 @@
 #########################################################################
 ##              Application on S&P500 using 2-parm SV Model            ##
 ##                  2 parameter model (set mu=0)                       ##
-##             this is the individual sampling (old) method            ##
+##         this is the individual sampling (old crappy) method         ##
 #########################################################################
 
 

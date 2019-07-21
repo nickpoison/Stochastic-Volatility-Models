@@ -1,7 +1,7 @@
 #########################################################################
-##              Application on S&P500 using 3-parm SV Model           ##
-##                  3 parameter model                                 ##
-##              joint sampling not adaptive                           ##
+##              Application on S&P500 using 3-parm SV Model            ##
+##                  3 parameter model                                  ##
+##             NEW joint sampling not adaptive                         ##
 #########################################################################
 
 
@@ -29,19 +29,19 @@ lambda_init = 2
 alpha.tar = 0.3 
 
 # Run it
-ptm <- proc.time()
+ ptm <- proc.time()
 u3na = pgasSV_binorm(nmcmc, burnin, y, init, hyper, sigma_MH, npart, parms_2 = FALSE, mcmseed)
-(time2run = proc.time() - ptm)
+ (time2run = proc.time() - ptm)
 
 # Acceptance Rate
 cat("The acceptance rate is", u3na$acp, "%.")
 
 
 ### Pretty pictures
-parms = cbind(u3na$phi, sqrt(u3na$q), u3na$mu)
-names = c(expression(phi), expression(sigma), expression(mu))
-culer = c(rgb(.66,.12,.85),      rgb(.12,.66,.85),    rgb(.8*.52,.8*.87,.8*.08) )
-culerb = c(rgb(.66,.12,.85, .4), rgb(.12,.66,.85,.4), rgb(.8*.52,.8*.87,.8*.08,.4) )
+parms  = cbind(u3na$phi, sqrt(u3na$q), u3na$mu)
+names  = c(expression(phi), expression(sigma), expression(mu))
+culer  = c(rgb(.66,.12,.85),      rgb(.12,.66,.85),    rgb(.8*.52,.8*.87,.8*.08) )
+culerb = c(rgb(.66,.12,.85, .4),  rgb(.12,.66,.85,.4), rgb(.8*.52,.8*.87,.8*.08,.4) )
 
 # parameters
 dev.new(width=9, height=6)  
