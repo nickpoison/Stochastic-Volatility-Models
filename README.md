@@ -6,7 +6,7 @@
 
 ####  _An Approach to Efficient Fitting of Univariate and Multivariate Stochastic Volatility Models_
 
-**The paper is available at:** [arXiv](https://arxiv.org/abs/1907.08372) or  [Research Gate](https://www.researchgate.net/publication/334457681_An_Approach_to_Efficient_Fitting_of_Univariate_and_Multivariate_Stochastic_Volatility_Models) 
+**The preprint is available at:** [arXiv](https://arxiv.org/abs/1907.08372) or  [Research Gate](https://www.researchgate.net/publication/334457681_An_Approach_to_Efficient_Fitting_of_Univariate_and_Multivariate_Stochastic_Volatility_Models) 
 
 
 * The data are in the folder *data* and are compressed R data files.
@@ -26,7 +26,7 @@
 
 ----
 ----
-The bibTeX item for the paper at arXiv can be:
+The bibTeX item for the preprint at arXiv can be:
 <pre>
 @online{GongStoffer2019,
 author =  {Gong, Chen and Stoffer, David S.},
