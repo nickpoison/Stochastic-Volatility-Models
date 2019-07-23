@@ -1,3 +1,5 @@
+######  this example needs to be redone ... 
+
 library(astsa)
 #
 set.seed(9753)
@@ -20,10 +22,11 @@ numer = function(sig,phi,h) { exp(sig*phi^h)-1 }
 denom = function(sig) { 3*exp(sig)-1 }
 
 # ACFs
-phi =.97
-u1  = numer(sig1,phi,1:30)/denom(sig1)
-phi =.92
-u2  = numer(sig2,phi,1:30)/denom(sig2)
+phi=.97; sig = sig1^2/(1-phi^2)
+u1 = numer(sig,phi,1:30)/denom(sig)
+phi=.92; sig = sig2^2/(1-phi^2)
+u2 = numer(sig,phi,1:30)/denom(sig)
+
 
 ##
 culera = c(rgb(.85,.30,.12,.6), rgb(.12,.65,.85,.6))
