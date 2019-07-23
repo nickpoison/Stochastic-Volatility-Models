@@ -12,7 +12,7 @@
 * The data are in the folder *data* and are compressed R data files.
 * The various PGAS files are in the folder *R* ... these are sourced in the files used to run the examples.
 * Each example is identified by starting with `run_` and then a self describing title.  You just run the code, it will call the data file and PGAS procedure as needed.
-
+* We changed the simulation a bit (Figures 1 & 2) but the preprint has the old figures - there's not much difference but we found a little blooper in the orignal version.
 
 
  _You'll need the following R packages to run all the code:_
