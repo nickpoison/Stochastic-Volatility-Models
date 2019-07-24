@@ -19,11 +19,11 @@ L    =  min(y1,y2)
 U    =  max(y1,y2)
 
 SVacf = function(phi,sig,h){
-            # returns the acf of the squared returns
-			sigx2 = sig^2/(1-phi^2)                
-            numer = exp(sigx2*phi^h)-1
-			denom = 3*exp(sigx2)-1
-			return(numer/denom)
+# returns the model acf of the squared returns
+  sigx2 = sig^2/(1-phi^2)                
+  numer = exp(sigx2*phi^h)-1
+  denom = 3*exp(sigx2)-1
+  return(numer/denom)
 }
 
 # ACFs
