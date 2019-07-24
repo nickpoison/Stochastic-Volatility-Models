@@ -53,9 +53,9 @@ dev.new(height=7, width=9)
 IF = sprintf("%.2f", 
 round(cbind(initseq(parms[,1])$var.pos/initseq(parms[,1])$gamma0, 
             initseq(parms[,2])$var.pos/initseq(parms[,2])$gamma0, 
-			initseq(parms[,3])$var.pos/initseq(parms[,3])$gamma0, 
-            initseq(parms[,4])$var.pos/initseq(parms[,4])$gamma0, 
-			initseq(parms[,5])$var.pos/initseq(parms[,5])$gamma0), 3 ))
+            initseq(parms[,3])$var.pos/initseq(parms[,3])$gamma0, 
+			initseq(parms[,4])$var.pos/initseq(parms[,4])$gamma0, 
+            initseq(parms[,5])$var.pos/initseq(parms[,5])$gamma0), 3 ))
 par(mfrow=c(3,5))
 for (i in 1:5){
 tsplot(parms[,i], ylab='trace', xlab='index', ,main='', col=culer[i])
