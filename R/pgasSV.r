@@ -33,7 +33,7 @@ u = cpf_as_sv(y, phi[1], q[1], N,  X[1,])   #  changed from X to X[1,]
    w = u$w                   # returned weights
 # Draw J
  J = which( (runif(1)-cumsum(w[,T])) < 0 )[1]
- X[1,] = particles[J,]      
+ X[1,] = scale(particles[J,], center=TRUE, scale=FALSE)      
  
    
 # Run MCMC loop
@@ -53,7 +53,7 @@ u = cpf_as_sv(y, phi[1], q[1], N,  X[1,])   #  changed from X to X[1,]
       w = u$w                   # returned weight
     # Draw J (extract a particle trajectory)
         J = which( (runif(1)-cumsum(w[,T])) < 0 )[1]
-        X[k,] = particles[J,]     # center X
+        X[k,] = scale(particles[J,], center=TRUE, scale=FALSE)      # center X
   pr$step()
 }#end
 bi = 1:burnin 

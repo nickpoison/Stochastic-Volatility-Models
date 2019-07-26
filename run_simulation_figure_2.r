@@ -9,7 +9,7 @@
 library(astsa)
 library(plyr)
 library(MASS)
-source('pgasSV.r')
+source('R/pgasSV.r')
 
 
 npart   = 20       # Number of particles used in pgas                        
@@ -61,7 +61,7 @@ tsplot(u1, col=culer[1], lwd=2, ylab='ACF', xlab='LAG', ylim=c(-.2,1), lty=6)
  lines(u2,  col=culer[2], lwd=2)
  legend('topright', lty = c(6,1), legend=names, col=culer, cex=1.1, bg='white', lwd=2, text.col=culer)
  abline(h=c(0,-2/sqrt(1000),2/sqrt(1000)), col=gray(.5), lty=c(1,2,2))
-z  = kde2d(parms[,1], parms[,2], h=c(.05,.14))
+z  = kde2d(parms[,1], parms[,2], h=c(.075,.15))
 plot(parms[,1], parms[,2], pch=20, col=rgb(24,116,205,max=255,alpha=150), 
      xlab=expression(phi), ylab=expression(sigma), cex=1.25, cex.lab=1.25, panel.first=Grid())
  contour(z, drawlabels=FALSE, nlevels=15,  add=TRUE, col=gray(.5))
