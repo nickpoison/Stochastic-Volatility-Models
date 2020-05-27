@@ -2,11 +2,11 @@
 
 
 
-##### R Code to accompany 
+##### R Code to accompany the May 2020 version of
 
 ####  _A Note on Efficient Fitting of Stochastic Volatility Models_
 
-**The preprint is available:** [here](paper_v2.pdf) and eventually at [arXiv](xxxx) 
+**The preprint is available here:** [version 2](paper_v2.pdf) 
 
 
 * The data are in the folder *data* and are compressed R data files.
@@ -28,15 +28,15 @@
 
 ----
 ----
-The bibTeX item for the preprint at arXiv can be:
+The bibTeX item for the preprint here can be:
 <pre>
-@online{GongStoffer2019,
+@online{GongStoffer2020,
 author =  {Gong, Chen and Stoffer, David S.},
 year = {2020},
 month = {05},
 title = {A Note on Efficient Fitting of Stochastic Volatility Models},
 doi = {10.13140/RG.2.2.29926.37440}
-howpublished = "\url{https://arxiv.org/abs/xxx}",
+howpublished = "\url{https://github.com/nickpoison/Stochastic-Volatility-Models/paper_v2.pdf}",
 }
 </pre>
 
