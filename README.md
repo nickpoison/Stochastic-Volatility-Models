@@ -6,7 +6,7 @@
 
 ####  _A Note on Efficient Fitting of Stochastic Volatility Models_
 
-**The preprint is available at:** [arXiv](xxxx) 
+**The preprint is available:** [here](paper_v2.pdf) and eventually at [arXiv](xxxx) 
 
 
 * The data are in the folder *data* and are compressed R data files.
