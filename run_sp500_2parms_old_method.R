@@ -77,11 +77,20 @@ tsplot(parms[,i], ylab='trace', xlab='index', ,main='', col=culer[i])
 tsplot(u2, col=culera[2], lwd=2, ylab='ACF', xlab='LAG', ylim=c(L,U))
  lines(u1, col=culera[1], lwd=2)
  abline(h=0)
- legend('topright', legend=c(IF[1], IF[2]), lwd=2, col=culer, title.col=1, 
-        text.col=culer, title="Inefficiency", bg='white', text.font=2)
+ #legend('topright', legend=c(IF[1], IF[2]), lwd=2, col=culer, title.col=1, text.col=culer, title="Inefficiency", bg='white', text.font=2)
+  legend('topright', legend=c(as.expression(bquote(.(IF[1])~~"["~phi~"]")), 
+		                     as.expression(bquote(.(IF[2])~~"["~sigma~"]"))), 
+        lwd=2, col=culer, title.col=1, lty=c(6,1), text.col=culer, title="Inefficiency", bg='white', text.font=2)
 plot(parms[,1], parms[,2], pch=20, col=rgb(24,116,205,max=255,alpha=150), 
      xlab=expression(phi), ylab=expression(sigma), cex=1.25, cex.lab=1.25, panel.first=Grid() )
  abline(h=mean(parms[,2]), col=gray(.5))
  abline(v=mean(parms[,1]), col=gray(.5))
 
-
+###############################################
+# > cor(parms)
+#            [,1]       [,2]
+# [1,]  1.0000000 -0.6133442
+# [2,] -0.6133442  1.0000000
+# 
+# > colMeans(parms)
+# [1] 0.8839556 0.6246900
