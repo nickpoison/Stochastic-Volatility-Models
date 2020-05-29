@@ -6,7 +6,7 @@
 
 ####  _A Note on Efficient Fitting of Stochastic Volatility Models_
 
-**The preprint is available here:** [version 2](paper_v2.pdf) 
+**The preprint is available here:** [paper.pdf](paper.pdf) 
 
 
 * The data are in the folder *data* and are compressed R data files.
@@ -35,8 +35,7 @@ author =  {Gong, Chen and Stoffer, David S.},
 year = {2020},
 month = {05},
 title = {A Note on Efficient Fitting of Stochastic Volatility Models},
-doi = {10.13140/RG.2.2.29926.37440}
-howpublished = "\url{https://github.com/nickpoison/Stochastic-Volatility-Models/blob/master/paper_v2.pdf}",
+howpublished = "\url{https://github.com/nickpoison/Stochastic-Volatility-Models/blob/master/paper.pdf}",
 }
 </pre>
 
