@@ -6,7 +6,7 @@
 
 ###  _A Note on Efficient Fitting of Stochastic Volatility Model_
 
-** The preprint is available here and at ResearchGate: [paper.pdf](https://www.researchgate.net/publication/341753430_A_Note_on_Efficient_Fitting_of_Stochastic_Volatility_Models)  **
+**The preprint is available here and at ResearchGate: [paper.pdf](https://www.researchgate.net/publication/341753430_A_Note_on_Efficient_Fitting_of_Stochastic_Volatility_Models)**
 
 
 * The data are in the folder *data* and are compressed R data files.
