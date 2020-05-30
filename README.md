@@ -28,7 +28,7 @@
 
 ----
 ----
-The bibTeX item for the preprint here can be:
+The bibTeX item for the preprint can be:
 <pre>
 @online{GongStoffer2020,
 author =  {Gong, Chen and Stoffer, David S.},
