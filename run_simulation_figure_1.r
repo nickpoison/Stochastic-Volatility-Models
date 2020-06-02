@@ -2,16 +2,16 @@ library(astsa)
 #
 set.seed(1989)
 num  = 1000
-lev  =  0
+mu   =  0
 beta =  1
 Vsd  =  1
 phi1 =  0.99  # Model I
 sig1 =  0.15  # Model I
 phi2 =  0.95  # Model II
 sig2 =  0.35  # Model II
-x1   =  arima.sim(list(order=c(1,0,0), ar=phi1), sd=sig1, n=num) + lev   
+x1   =  arima.sim(list(order=c(1,0,0), ar=phi1), sd=sig1, n=num) + mu   
 y1   =  beta*exp(x1/2)*rnorm(num,0,Vsd)  
-x2   =  arima.sim(list(order=c(1,0,0), ar=phi2), sd=sig2, n=num) + lev   
+x2   =  arima.sim(list(order=c(1,0,0), ar=phi2), sd=sig2, n=num) + mu   
 y2   =  beta*exp(x2/2)*rnorm(num,0,Vsd) 
 y1   =  as.vector(y1)  
 y2   =  as.vector(y2)
