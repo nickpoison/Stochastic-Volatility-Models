@@ -4,7 +4,7 @@
 
 ###### R Code to accompany the May 2020 version of
 
-###  _A Note on Efficient Fitting of Stochastic Volatility Model_
+###  _A Note on Efficient Fitting of Stochastic Volatility Modesl_
 
 **The preprint is available here and at ResearchGate: [paper.pdf](https://www.researchgate.net/publication/341753430_A_Note_on_Efficient_Fitting_of_Stochastic_Volatility_Models)**
 
