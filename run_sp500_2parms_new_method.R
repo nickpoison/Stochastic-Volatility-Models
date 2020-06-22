@@ -123,12 +123,12 @@ polygon(xx, yy, border=NA, col=culerb[2])
 
 
 
-##################  try remap #################
-parme = parms
-nn = nrow(parms)
-for (i in 1:nn){ 
-  if (parms[i,1]>1) {parme[i,2]= parms[i,2]/parms[i,1]; parme[i,1]=1/parms[i,1] }
-  }
+################## remap parms to causal #################
+# parme = parms
+# nn = nrow(parms)
+# for (i in 1:nn){ 
+#   if (parms[i,1]>1) {parme[i,2]= parms[i,2]/parms[i,1]; parme[i,1]=1/parms[i,1] }
+#   }
 
 
 
