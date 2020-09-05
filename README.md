@@ -2,16 +2,20 @@
 
 
 
-###### R Code to accompany the May 2020 version of
+###### R Code to accompany the Sept 2020 and final version of
 
 ###  _A Note on Efficient Fitting of Stochastic Volatility Models_
 
-**The preprint is available here and at ResearchGate: [paper.pdf](https://www.researchgate.net/publication/341753430_A_Note_on_Efficient_Fitting_of_Stochastic_Volatility_Models)**
+**The latest version will be here soon.**
+
+An older preprint is available here and at ResearchGate: [paper.pdf](https://www.researchgate.net/publication/341753430_A_Note_on_Efficient_Fitting_of_Stochastic_Volatility_Models)
 
 
 * The data are in the folder *data* and are compressed R data files.
 * The various PGAS files are in the folder *R* ... these are sourced in the files used to run the examples.
 * Each example is identified by starting with `run_` and then a self describing title.  You just run the code, it will call the data file and PGAS procedure as needed.
+* Added an example from stochvol R package, but the essential part
+of the code is in one of the vignettes.
 
 
 
