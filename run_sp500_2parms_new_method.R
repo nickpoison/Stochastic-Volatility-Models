@@ -78,9 +78,8 @@ tsplot(parms[,i], ylab='trace', xlab='index', ,main='', col=culer[i])
   L  = min(u1,u2)
   U  = max(c(u1,u2,1))
  tsplot(u2, col=culera[2], lwd=2, ylab='ACF', xlab='LAG', ylim=c(L,U))
- lines(u1, col=culera[1], lwd=2)
+ lines(u1, col=culera[1], lwd=2, lty=6)
  abline(h=0)
-# legend('topright', legend=c(IF[1], IF[2]), lwd=2, col=culer, title.col=1, text.col=culer,  title="Inefficiency", bg='white', text.font=2)
  legend('topright', legend=c(as.expression(bquote(~~.(IF[1])~~"["~phi~"]")), 
 		                     as.expression(bquote(.(IF[2])~~"["~sigma~"]"))), 
         lwd=2, col=culer, title.col=1, lty=c(6,1), text.col=culer, title="Inefficiency", bg='white', text.font=2)
