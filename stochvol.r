@@ -32,3 +32,16 @@ plot(parms[,1], parms[,2], pch=20, col=rgb(24,116,205,max=255,alpha=100),
  abline(h=mean(parms[,2]), col=gray(.5))
  abline(v=mean(parms[,1]), col=gray(.5))
  
+ 
+###
+# ESS
+###
+library(mcmc)
+en = 10000
+ESS = en/(cbind(initseq(parms[,1])$var.pos/initseq(parms[,1])$gamma0, 
+	             initseq(parms[,2])$var.pos/initseq(parms[,2])$gamma0)) 
+###
+#
+#> ESS
+#        [,1]     [,2]
+#[1,] 275.842 108.8248 
