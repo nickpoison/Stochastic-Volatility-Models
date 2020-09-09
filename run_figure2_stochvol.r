@@ -1,3 +1,5 @@
+##### this example just uses code from stochvol #####
+#####################################################
 library(stochvol)
 library(astsa)
 library(MASS)
@@ -33,9 +35,8 @@ plot(parms[,1], parms[,2], pch=20, col=rgb(24,116,205,max=255,alpha=100),
  abline(v=mean(parms[,1]), col=gray(.5))
  
  
-###
+####
 # ESS
-###
 library(mcmc)
 en = 10000
 ESS = en/(cbind(initseq(parms[,1])$var.pos/initseq(parms[,1])$gamma0, 
