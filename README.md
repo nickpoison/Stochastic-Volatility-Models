@@ -6,9 +6,7 @@
 
 ###  _A Note on Efficient Fitting of Stochastic Volatility Models_
 
-** The latest version is here: [paper](https://github.com/nickpoison/Stochastic-Volatility-Models/blob/master/paper.pdf) **
-
-
+#### The latest version is here: [paper](https://github.com/nickpoison/Stochastic-Volatility-Models/blob/master/paper.pdf) 
 
 
 * The data are in the folder *data* and are compressed R data files.
@@ -16,8 +14,6 @@
 * Each example is identified by starting with `run_` and then a self describing title.  You just run the code, it will call the data file and PGAS procedure as needed.
 * Added an example from stochvol R package, but the essential part
 of the code is in one of the vignettes.
-
-
 
  _You'll need the following R packages to run all the code:_
 
