@@ -6,9 +6,9 @@
 
 ###  _A Note on Efficient Fitting of Stochastic Volatility Models_
 
-**The latest version will be here soon.**
+** The latest version is here: [paper](https://github.com/nickpoison/Stochastic-Volatility-Models/blob/master/paper.pdf) **
 
-An older preprint is available here and at ResearchGate: [paper.pdf](https://www.researchgate.net/publication/341753430_A_Note_on_Efficient_Fitting_of_Stochastic_Volatility_Models)
+
 
 
 * The data are in the folder *data* and are compressed R data files.
@@ -37,10 +37,9 @@ The bibTeX item for the preprint can be:
 @online{GongStoffer2020,
 author =  {Gong, Chen and Stoffer, David S.},
 year = {2020},
-month = {05},
+month = {09},
 title = {A Note on Efficient Fitting of Stochastic Volatility Models},
-doi = {10.13140/RG.2.2.29482.24005}
-howpublished = "\url{https://www.researchgate.net/publication/341753430_A_Note_on_Efficient_Fitting_of_Stochastic_Volatility_Models}",
+howpublished = "\url{https://github.com/nickpoison/Stochastic-Volatility-Models/blob/master/paper.pdf}",
 }
 </pre>
 
@@ -55,7 +54,7 @@ For the bibTeX item to the code here, I used the following:
 author = {Gong, Chen and Stoffer, David S.},
 title = {{Stochastic Volatility Models}},
 howpublished = "\url{https://github.com/nickpoison/Stochastic-Volatility-Models/}",
-month = {05},
+month = {09},
 year = {2020}, 
 note = "[GitHub Repository]"
 }  
