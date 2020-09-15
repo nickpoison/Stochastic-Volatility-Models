@@ -6,7 +6,7 @@
 
 ###  _A Note on Efficient Fitting of Stochastic Volatility Models_
 
-#### The latest version is here: [paper](https://github.com/nickpoison/Stochastic-Volatility-Models/blob/master/paper.pdf) 
+#### The latest version is here: [paper](https://github.com/nickpoison/Stochastic-Volatility-Models/blob/master/paper.pdf) or here: [DOI: 10.13140/RG.2.2.29024.71687](10.13140/RG.2.2.29024.71687)
 
 
 * The data are in the folder *data* and are compressed R data files.
