@@ -6,7 +6,7 @@
 
 ###  _A Note on Efficient Fitting of Stochastic Volatility Models_
 
-#### The latest version is here: [paper](https://github.com/nickpoison/Stochastic-Volatility-Models/blob/master/paper.pdf)
+#### The paper has been published online: [jtsa.12561](https://onlinelibrary.wiley.com/doi/10.1111/jtsa.12561)
 
 
 * The data are in the folder *data* and are compressed R data files.
@@ -21,6 +21,7 @@ of the code is in one of the vignettes.
 * plyr
 * MASS 
 * mcmc  
+* stochvol (_needed only to run their example, figure 2_)
 
 <br/> 
 
@@ -28,15 +29,21 @@ of the code is in one of the vignettes.
 
 ----
 ----
-The bibTeX item for the preprint can be:
+The bibTeX entry for the current version is:
 <pre>
-@online{GongStoffer2020,
-author =  {Gong, Chen and Stoffer, David S.},
-year = {2020},
-month = {09},
+@article{doi:10.1111/jtsa.12561,
+author = {Gong, Chen and Stoffer, David S.},
 title = {A Note on Efficient Fitting of Stochastic Volatility Models},
-howpublished = "\url{https://github.com/nickpoison/Stochastic-Volatility-Models/blob/master/paper.pdf}",
+journal = {Journal of Time Series Analysis},
+volume = {n/a},
+number = {n/a},
+pages = {},
+keywords = {Ancestral sampling, efficient Markov chain Monte Carlo, particle Gibbs, stochastic volatility},
+doi = {10.1111/jtsa.12561},
+url = {https://onlinelibrary.wiley.com/doi/abs/10.1111/jtsa.12561},
+eprint = {https://onlinelibrary.wiley.com/doi/pdf/10.1111/jtsa.12561},
 }
+
 </pre>
 
 
