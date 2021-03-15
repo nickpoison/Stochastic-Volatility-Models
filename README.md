@@ -30,29 +30,36 @@ of the code is in one of the vignettes.
 ----
 ----
 The bibTeX entry for the current version is:
-<pre>
+
+```
 @article{doi:10.1111/jtsa.12561,
 author = {Gong, Chen and Stoffer, David S.},
 title = {A Note on Efficient Fitting of Stochastic Volatility Models},
 journal = {Journal of Time Series Analysis},
-volume = {n/a},
-number = {n/a},
-pages = {},
+year = {2021},
+volume = {42},
+number = {2},
+pages = {186-200},
 keywords = {Ancestral sampling, efficient Markov chain Monte Carlo, particle Gibbs, stochastic volatility},
 doi = {10.1111/jtsa.12561},
 url = {https://onlinelibrary.wiley.com/doi/abs/10.1111/jtsa.12561},
 eprint = {https://onlinelibrary.wiley.com/doi/pdf/10.1111/jtsa.12561},
 }
+```
 
-</pre>
+And plain text is
 
-
+```
+Gong, C. and Stoffer, D.S. (2021), A Note on Efficient Fitting of Stochastic Volatility Models. 
+          J. Time Ser. Anal., 42: 186-200. https://doi.org/10.1111/jtsa.12561
+```
 
 
 ---
 
 For the bibTeX item to the code here, I used the following:
-<pre>
+
+```
 @misc{GitGongStoffer2020,
 author = {Gong, Chen and Stoffer, David S.},
 title = {{Stochastic Volatility Models}},
@@ -61,4 +68,4 @@ month = {09},
 year = {2020}, 
 note = "[GitHub Repository]"
 }  
-</pre>
+```
