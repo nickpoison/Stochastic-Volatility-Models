@@ -1,6 +1,11 @@
 # Stochastic-Volatility-Models
 
 
+## The univariate case is included in `astsa` as `SV.mcmc`
+
+
+<br/><br/>
+
 
 ###### R Code to accompany the Sept 2020 and final version of
 
