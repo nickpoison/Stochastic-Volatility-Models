@@ -1,17 +1,17 @@
 # Stochastic-Volatility-Models
 
-
-## The univariate case is included in `astsa` as `SV.mcmc`
-
+---
+## [The univariate case is included in `astsa` as `SV.mcmc`](https://github.com/nickpoison/astsa/blob/master/README.md)
+---
 
 <br/><br/>
+<br/><br/>
 
+ R Code to accompany the Sept 2020 and final version of
 
-###### R Code to accompany the Sept 2020 and final version of
+  _A Note on Efficient Fitting of Stochastic Volatility Models_
 
-###  _A Note on Efficient Fitting of Stochastic Volatility Models_
-
-#### The paper has been published online: [jtsa.12561](https://onlinelibrary.wiley.com/doi/10.1111/jtsa.12561)
+The paper has been published online: [jtsa.12561](https://onlinelibrary.wiley.com/doi/10.1111/jtsa.12561)
 
 
 * The data are in the folder *data* and are compressed R data files.
